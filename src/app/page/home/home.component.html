@@ -1,3 +1,16 @@
-<p>home works!</p>
+<app-search
+   label="Search"
+   (onValueChange)="searchValue($event)"
+></app-search>
+<div *ngFor="let item of posts; trackBy: trackByFn">
+   <app-item
+      [id]="item.id"
+      [body]="item.body"
+      [title]="item.title"
+      [imgUrl]="item.url"
+      [thumbnail]="item.thumbnailUrl"
+      appCustomSelected
+   ></app-item>
+</div>
 
-<app-search label="Hello search" (onMouseClick)="searchClick($event)"></app-search>
+

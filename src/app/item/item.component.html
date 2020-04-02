@@ -1,0 +1,14 @@
+<mat-card>
+   <mat-card-header>
+      <div mat-card-avatar
+           *ngIf="thumbnail"
+           [style.background-image]="'url('+thumbnail+')'"
+           class="thumbnail"></div>
+      <mat-card-title>{{title | uppercase}}</mat-card-title>
+      <mat-card-subtitle>ID: {{id}}</mat-card-subtitle>
+   </mat-card-header>
+   <img *ngIf="imgUrl" mat-card-image [src]="imgUrl" class="item-image">
+   <mat-card-content *ngIf="body">
+      <p>{{body}}</p>
+   </mat-card-content>
+</mat-card>

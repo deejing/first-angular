@@ -1,6 +1,7 @@
-<pre>{{searchInput}}</pre>
 <mat-form-field>
    <mat-label>{{label}}</mat-label>
-   <input matInput [(ngModel)]="searchInput">
+   <input matInput [(ngModel)]="searchInput"
+      (ngModelChange)="onModelChange($event)"
+   >
 </mat-form-field>
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiService} from '../../api.service';
+import {Posts} from '../../posts';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-   constructor() { }
+   private posts: Array<Posts>;
+   private _posts: Array<Posts>;
 
-   searchClick(event: MouseEvent) {
-      console.log(event);
+   constructor(
+      private apiService: ApiService
+   ) { }
+
+   searchValue(value: string) {
+      if (value && value.length > 3) {
+         this.posts = this._posts.filter(post => {
+            return post.title.includes(value);
+         });
+      } else {
+         this.posts = this._posts;
+      }
    }
 
    ngOnInit() {
+      this.apiService.getPosts().subscribe(response => {
+         this.posts = response;
+         this._posts = response;
+      });
+   }
+
+   trackByFn = (index, item: Posts) => {
+      return item.id;
    }
 
 }

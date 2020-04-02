@@ -17,13 +17,20 @@ import {
 import { SearchComponent } from './search/search.component';
 
 import { FormsModule } from '@angular/forms';
+import { ItemComponent } from './item/item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UppercasePipe } from './uppercase.pipe';
+import { CustomSelectedDirective } from './custom-selected.directive';
 
 @NgModule({
    declarations: [
       AppComponent,
       HomeComponent,
       PostsComponent,
-      SearchComponent
+      SearchComponent,
+      ItemComponent,
+      UppercasePipe,
+      CustomSelectedDirective
    ],
    imports: [
       BrowserModule,
@@ -35,7 +42,8 @@ import { FormsModule } from '@angular/forms';
       MatCardModule,
       MatFormFieldModule,
       MatInputModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [AppComponent]

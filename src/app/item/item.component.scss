@@ -1,0 +1,13 @@
+:host {
+   display: flex;
+   margin-bottom: 1rem;
+
+   .mat-card {
+      border: 1px solid rgb(225, 225, 225);
+      border-radius: 0;
+   }
+
+   &.item-selected .mat-card {
+      background: rgba(25, 151, 236, 0.38);
+   }
+}

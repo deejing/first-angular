@@ -14,11 +14,11 @@ export class SearchComponent implements OnInit {
    @Input() label = 'Default label';
 
    @Output()
-   onMouseClick: EventEmitter<any> = new EventEmitter();
+   onValueChange: EventEmitter<any> = new EventEmitter();
 
    @HostListener('click', ['$event'])
-   onElemenClick(even: MouseEvent) {
-      this.onMouseClick.emit(even);
+   onModelChange(value: string) {
+      this.onValueChange.emit(value);
    }
 
    ngOnInit() {}
