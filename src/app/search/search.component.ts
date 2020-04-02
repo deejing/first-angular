@@ -9,13 +9,16 @@ export class SearchComponent implements OnInit {
 
   constructor() { }
 
-  @Input() label: string = 'Defaul label';
+  searchInput: string;
 
-  @Output() onClick: EventEmitter<any> = new EventEmitter();
+  @Input() label = 'Default label';
+
+  @Output()
+  onMouseClick: EventEmitter<any> = new EventEmitter();
 
   @HostListener('click', ['$event'])
   onElemenClick(even: MouseEvent) {
-    this.onClick.emit(even);
+    this.onMouseClick.emit(even);
   }
 
   ngOnInit() {}
