@@ -10,9 +10,9 @@ import {
    MatMenuModule,
    MatButtonModule,
    MatIconModule,
-
    MatFormFieldModule,
-   MatInputModule
+   MatInputModule,
+   MatCardModule
 } from '@angular/material';
 import { SearchComponent } from './search/search.component';
 
@@ -32,7 +32,7 @@ import { FormsModule } from '@angular/forms';
       MatButtonModule,
       MatIconModule,
       MatMenuModule,
-
+      MatCardModule,
       MatFormFieldModule,
       MatInputModule,
       FormsModule
