@@ -1,17 +1,15 @@
 <button mat-icon-button [matMenuTriggerFor]="mainMenu" >
-  <mat-icon>reorder</mat-icon>
+   <mat-icon>reorder</mat-icon>
 </button>
 
 <mat-menu #mainMenu>
-  <button mat-menu-item routerLink="/home" routerLinkActive="active">
-    <mat-icon>home</mat-icon>
-    Home
-  </button>
+   <button mat-menu-item routerLink="/home" routerLinkActive="active">
+      <mat-icon>home</mat-icon> Home
+   </button>
 
-  <button mat-menu-item routerLink="/posts" routerLinkActive="active">
-    <mat-icon>insert_drive_file</mat-icon>
-    Posts
-  </button>
+   <button mat-menu-item routerLink="/posts" routerLinkActive="active">
+      <mat-icon>insert_drive_file</mat-icon> Posts
+</button>
 </mat-menu>
 
 <router-outlet></router-outlet>

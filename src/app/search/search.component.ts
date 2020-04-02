@@ -7,19 +7,19 @@ import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@a
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+   constructor() { }
 
-  searchInput: string;
+   searchInput: string;
 
-  @Input() label = 'Default label';
+   @Input() label = 'Default label';
 
-  @Output()
-  onMouseClick: EventEmitter<any> = new EventEmitter();
+   @Output()
+   onMouseClick: EventEmitter<any> = new EventEmitter();
 
-  @HostListener('click', ['$event'])
-  onElemenClick(even: MouseEvent) {
-    this.onMouseClick.emit(even);
-  }
+   @HostListener('click', ['$event'])
+   onElemenClick(even: MouseEvent) {
+      this.onMouseClick.emit(even);
+   }
 
-  ngOnInit() {}
+   ngOnInit() {}
 }

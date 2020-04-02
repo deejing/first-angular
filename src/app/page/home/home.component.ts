@@ -7,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+   constructor() { }
 
+   searchClick(event: MouseEvent) {
+      console.log(event);
+   }
 
-  searchClick(event: MouseEvent) {
-    console.log(event);
-  }
-
-  ngOnInit() {
-  }
+   ngOnInit() {
+   }
 
 }
